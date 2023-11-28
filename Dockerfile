@@ -28,8 +28,7 @@ RUN powershell -Command \
 $ErrorActionPreference = 'Stop'; \
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; \
 Invoke-WebRequest -Method Get -Uri
-https://windows.php.net/downloads/releases/php-5.6.40-Win32-VC11-x86.zip -OutFile c:\php.zip
-; \
+https://github.com/ismartsiva4/containers-windows/raw/main/php-8.1.26-Win32-vs16-x64.zip ; \
 Expand-Archive -Path c:\php.zip -DestinationPath c:\php ; \
 Remove-Item c:\php.zip -Force
 
