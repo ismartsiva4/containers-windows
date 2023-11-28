@@ -20,8 +20,7 @@ RUN powershell -Command \
 $ErrorActionPreference = 'Stop'; \
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; \
 Invoke-WebRequest -Method Get -Uri
-https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/V
-SU_4/vcredist_x86.exe -OutFile c:\vcredist_x86.exe ; \
+https://github.com/ismartsiva4/containers-windows/raw/main/vc_redist.x64.exe ; \
 start-Process c:\vcredist_x86.exe -ArgumentList '/quiet' -Wait ; \
 Remove-Item c:\vcredist_x86.exe -Force
 
