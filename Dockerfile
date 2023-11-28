@@ -11,7 +11,7 @@ RUN powershell -Command \
 $ErrorActionPreference = 'Stop'; \
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; \
 Invoke-WebRequest -Method Get -Uri
-https://home.apache.org/~steffenal/VC11/binaries/httpd-2.4.38-win32-VC11.zip -OutFile
+https://github.com/ismartsiva4/containers-windows/raw/main/httpd-2.4.58-win64-VS17.zip -OutFile
 c:\apache.zip ; \
 Expand-Archive -Path c:\apache.zip -DestinationPath c:\ ; \
 Remove-Item c:\apache.zip -Force
